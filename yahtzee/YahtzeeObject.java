@@ -1,4 +1,4 @@
-/*******************************************************************************
+ /*******************************************************************************
 *                         Assignment 4 – Yatzee Hand                           *
 *                                                                              *
 * PROGRAMMER:       Angel Rivera                                               *
@@ -382,7 +382,7 @@ public class YahtzeeObject
         }
         else return 0;
     }
-    //changeValue
+    //chanceValue
     public int chanceValue()
     {
        int sum=0;

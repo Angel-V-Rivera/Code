@@ -1,40 +1,35 @@
 /*******************************************************************************
-*                       Final Project- SoloAppTester                           *
+*                         Assignment 2 – Sorting Algorithms tester             *
 *                                                                              *
 * PROGRAMMER:       Angel Rivera                                               *
-* CLASS:            CG102                                                      *
-* ASSIGNMENT:       Final Project                                              *
+* CLASS:            CS200                                                      *
+* ASSIGNMENT:       1                                                          *
 * INSTRUCTOR:       Dean Zeller                                                *
-* SUBMISSION DATE:  4/27/19                                                    *
+* SUBMISSION DATE:  10/04/19                                                   *
 *                                                                              *
 * DESCRIPTION:                                                                 *
-* This program works as the sologame tester                                    *
+* This program is the tester for sorting                                       *
+*                                                                              *
 *                                                                              *
 * COPYRIGHT:                                                                   *
 * This program is (c) 2019 Angel Rivera and Dean Zeller. This is original work,*
 * without use of outside sources.                                              *
 *******************************************************************************/
-public class YahtzeeScoreCardTester
+public class tester
 {
     public static void main(String args[])
     {
-        YahtzeeScoreCard card= new YahtzeeScoreCard();
-       
-        int i;
-        i=0;
-        while(i<13
-             
-             )
-        {
-            card.rollDice(true,true,true,true,true);
-            card.user();
-            card.tries();
-            System.out.println();
-            i++;
-            
-            
-        }
-        card.last();
-        System.out.println("Your final score was: "+card.totalScore);
+        
+        Sorting one = new Sorting();
+       one.random();
+        one.bubbleSort();
+        one.random();
+        one.insertion();
+        one.random();
+        one.selection();
+        one.random();
+        one.quicksortcall();
+        
+        
     }
 }
