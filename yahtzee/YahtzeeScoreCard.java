@@ -15,11 +15,6 @@
 * without use of outside sources.                                              *
 *******************************************************************************/
 import java.util.*;
-import javax.swing.*;
-import javax.swing.ImageIcon;
-import javax.swing.JLabel;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
 public class YahtzeeScoreCard
 {
    public YahtzeeObject hand;
@@ -39,7 +34,6 @@ public class YahtzeeScoreCard
    public int chanceScore= -1; 
    public int totalScore= 0;
    public int count=1;
-   public int count2=1;
    public boolean ava=true;
    public boolean ava2=true;
    public boolean ava3=true;
@@ -522,168 +516,5 @@ public class YahtzeeScoreCard
    {
        return hand.toString();
    }
-   public void user()
-   {   
-       boolean d1,d2,d3,d4,d5;
-       d1=false;
-       d2=false;
-       d3=false;
-       d4=false;
-       d5=false;
-       Scanner reader1 = new Scanner(System.in);
-       String sec;
-       JFrame f=new JFrame();
-       f.setSize(300,700);
-       f.setLayout(null);
-       f.setVisible(true);
-       JLabel L = new JLabel("JLabel Set Icon Example.");
-       f.add(L);
-       L.setIcon(new ImageIcon("download.jpg"));
-       L.setBounds(50,50, 200,80);
-       JLabel l1,l2,l3,l4,l5,l6,l7,l8,l9,l10,l11,l12,l13,l14,l15,l16,l17,l18,l19;
-       l1=new JLabel("Turn #"+count2+ " of 13");  count2++;
-       l1.setBounds(50,70, 200,200);
-       f.add(l1);
-       if(onesScore>=0)System.out.println(l1=new JLabel("1. Ones:"+String.format("%14d", onesScore)+onesScore));
-       else System.out.println(l1=new JLabel("1. Ones:"));
-       l1.setBounds(50,90, 200,200);
-       f.add(l1);
-       if(twosScore>=0)System.out.println(l2=new JLabel("2. Twos:"+"      "+twosScore));
-       else System.out.println(l2=new JLabel("2. Twos:"));
-       l2.setBounds(50,110, 200,200);
-       f.add(l2);
-       if(threesScore>=0)System.out.println(l3=new JLabel("3. Threes:"+"      "+threesScore));
-       else System.out.println(l3=new JLabel("3. Threes:"));
-       l3.setBounds(50,130, 200,200);
-       f.add(l3);
-       if(foursScore>=0)System.out.println(l4=new JLabel("4. Fours:"+"      "+foursScore));
-       else System.out.println(l4=new JLabel("4. Fours:"));
-       l4.setBounds(50,150, 200,200);
-       f.add(l4);
-       if(fivesScore>=0)System.out.println(l5=new JLabel("5. Fives:"+"      "+fivesScore));
-       else System.out.println(l5=new JLabel("5. Fives:"));
-       l5.setBounds(50,170, 200,200);
-       f.add(l5);
-       if(sixesScore>=0)System.out.println(l6=new JLabel("6. Sixes:"+"      "+sixesScore));
-       else System.out.println(l6=new JLabel("6. Sixes:"));
-       l6.setBounds(50,190, 200,200);
-       f.add(l6);
-       l7=new JLabel("Bonus"+"      "+bonusScore);
-       l7.setBounds(50,210, 200,200);
-       f.add(l7);
-       if(threeKindScore>=0)System.out.println(l8=new JLabel("7. 3-Kind:"+"      "+threeKindScore));
-       else System.out.println(l8=new JLabel("7. 3-Kind:"));
-       l8.setBounds(50,230, 200,200);
-       f.add(l8);
-       if(fourKindScore>=0)System.out.println(l9=new JLabel("8. 4-Kind:"+"      "+fourKindScore));
-       else System.out.println(l9=new JLabel("8. 4-Kind:"));
-       l9.setBounds(50,250, 200,200);
-       f.add(l9);
-       if(fullHouseScore>=0)System.out.println(l10=new JLabel("9. Full House:"+"      "+fullHouseScore));
-       else System.out.println(l10=new JLabel("9. Full House:"));
-       l10.setBounds(50,270, 200,200);
-       f.add(l10);
-       if(smallStraightScore>=0)System.out.println(l11=new JLabel("10. Small Straight:"+"      "+smallStraightScore));
-       else System.out.println(l11=new JLabel("10. Small Straight:"));
-       l11.setBounds(50,290, 200,200);
-       f.add(l11);
-       if(largeStraightScore>=0)System.out.println(l12=new JLabel("11. Large Straight:"+"      "+largeStraightScore));
-       else System.out.println(l12=new JLabel("11. Large Straight:"));
-       l12.setBounds(50,310, 200,200);
-       f.add(l12);
-       if(yahtzeeScore>=0)System.out.println(l13=new JLabel("12. Yahtzee:"+"      "+yahtzeeScore));
-       else System.out.println(l13=new JLabel("12. Yahtzee:"));
-       l13.setBounds(50,330, 200,200);
-       f.add(l13);
-       if(chanceScore>=0)System.out.println(l14=new JLabel("13. Chance:"+"      "+chanceScore));
-       else System.out.println(l14=new JLabel("13. Chance:"));
-       l14.setBounds(50,350, 200,200);
-       f.add(l14);
-       l15=new JLabel("Total:      "+"      "+totalScore);
-       l15.setBounds(50,370, 200,200);
-       f.add(l15);
-       l16=new JLabel("Dice Thrown #1:  "+toString());
-       l16.setBounds(50,400, 200,200);
-       f.add(l16);
-       l17=new JLabel("Dice to throw: :  ");
-       l17.setBounds(50,420, 200,200);
-       f.add(l17);
-       JCheckBox cb1,cb2,cb3,cb4,cb5; 
-        
-       cb1=new JCheckBox("1");  
-       cb1.setBounds(50,540,35,15);  
-       cb2=new JCheckBox("2");  
-       cb2.setBounds(90,540,35,15);  
-       cb3=new JCheckBox("3");  
-       cb3.setBounds(130,540,35,15);
-       cb4=new JCheckBox("4");  
-       cb4.setBounds(170,540,35,15);  
-       cb5=new JCheckBox("5");  
-       cb5.setBounds(210,540,35,15);
-       f.add(cb1);
-       f.add(cb2);
-       f.add(cb3);
-       f.add(cb4);
-       f.add(cb5);
-       sec = reader1.nextLine();
-       int i;
-       for (i=0;i<sec.length();i++)
-       {
-           char c = sec.charAt(i);
-           if (c == '1') d1 = true;
-           if (c == '2') d2 = true;
-           if (c == '3') d3 = true;
-           if (c == '4') d4 = true;
-           if (c == '5') d5 = true;
-      }
-      hand.rollDice(d1,d2,d3,d4,d5);
-      d1=false;
-      d2=false;
-      d3=false;
-      d4=false;
-      d5=false;
-      
-      l17=new JLabel("Dice Thrown #1:  "+toString());
-      l17.setBounds(50,600, 200,200);
-      f.add(l17);
-      l18=new JLabel("Dice to throw: :  ");
-      l18.setBounds(50,620, 200,200);
-      f.add(l18);
-      sec = reader1.nextLine();
-       int ii;
-       for (ii=0;i<sec.length();i++)
-       {
-           char c = sec.charAt(i);
-           if (c == '1') d1 = true;
-           if (c == '2') d2 = true;
-           if (c == '3') d3 = true;
-           if (c == '4') d4 = true;
-           if (c == '5') d5 = true;
-      }
-      hand.rollDice(d1,d2,d3,d4,d5);
-      d1=false;
-      d2=false;
-      d3=false;
-      d4=false;
-      d5=false;
-      
-      
-       JButton b = new JButton("Roll");
-    
-       b.addActionListener(new ActionListener()
-       {
-       public void actionPerformed(ActionEvent e)
-       {
-       }
-       });
-       b.setBounds(50,565,95,30);  
-       f.add(b);
-       
-   }
-   public void inicio()
-   {
-       
-   }
-  
    
 }

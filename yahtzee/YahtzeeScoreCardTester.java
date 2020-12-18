@@ -20,17 +20,14 @@ public class YahtzeeScoreCardTester
     public static void main(String args[])
     {
         YahtzeeScoreCard card= new YahtzeeScoreCard();
-        
         int i;
         i=0;
         while(i<13)
         {
             card.rollDice(true,true,true,true,true);
-            card.user();
             card.displayScoresheet();
             System.out.println();
             i++;
-            
             
         }
         card.lastTable();
